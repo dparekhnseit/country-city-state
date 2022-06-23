@@ -1,0 +1,60 @@
+<p class="navbar-text bg-warning navbar-right"> <b class="title"> Country-State-City</b></p>
+
+<div class="card">
+
+  <div class="card-body">
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Country</mat-label>
+    <input type="text"
+           placeholder="Select Country"
+           aria-label="Country"
+           matInput
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of countries" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>State</mat-label>
+    <input type="text"
+           placeholder="Select State"
+           aria-label="State"
+           matInput
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let state of states" [value]="state">
+        {{state}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>State</mat-label>
+    <input type="text"
+           placeholder="Select City"
+           aria-label="City"
+           matInput
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let state of states" [value]="state">
+        {{state}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+</div>
+
+<div class="card-footer">
+
+  <button class="btn btn-success">Save</button>
+</div>
+
+</div>
